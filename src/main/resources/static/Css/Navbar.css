@@ -1,0 +1,23 @@
+nav{
+
+background-color: brown;
+
+}
+.projectsButton{
+    font-size: 22px;
+}
+.dropdownButton{
+top: -85%;
+    left: -10%;
+}
+.dropdown-menu{
+
+
+}
+.projectForm{
+    display:flex;
+    flex-direction: column;
+}
+.dropdown-item{
+margin-bottom: 2%;
+}
