@@ -21,21 +21,23 @@
     let pageDataJsonString = "[[${pageData}]]";
     let navbarDataJsonString = "[[${navData}]]";
 </script>
-<script src="../Js/Navbar.js"></script>
+
 
     <div class="container pageWrapper">
 
-        <header th:replace="fragments/Header"></header>
-        <nav th:replace="fragments/Navbar"></nav>
-        <main id="main" th:replace="fragments/Main"> <!-- need to make a replace like above but make javascript get a variable from cookies and check it and get from database the value associated with it -->
+        <header th:replace="pageFragments/Header"></header>
+        <nav th:replace="pageFragments/Navbar"></nav>
+        <main id="main" th:replace="pageFragments/Main"> <!-- need to make a replace like above but make javascript get a variable from cookies and check it and get from database the value associated with it -->
         </main>
 
-        <footer th:replace="fragments/Footer"></footer>
+        <footer th:replace="pageFragments/Footer"></footer>
 
 
     </div>
 
 
-
+<script src="../Js/Navbar.js"></script>
+<script src="../Js/Main.js"></script>
+<script src="../Js/pages/Homepage.js"></script>
 </body>
 </html>

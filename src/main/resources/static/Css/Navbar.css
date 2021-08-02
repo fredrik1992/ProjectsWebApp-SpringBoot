@@ -1,13 +1,14 @@
 nav{
 
 background-color: brown;
-
+height: 5%;
 }
 .projectsButton{
     font-size: 22px;
+
 }
 .dropdownButton{
-top: -85%;
+top: -50%;
     left: -10%;
 }
 .dropdown-menu{
@@ -18,6 +19,23 @@ top: -85%;
     display:flex;
     flex-direction: column;
 }
+ul {
+    list-style-type: none;
+}
 .dropdown-item{
 margin-bottom: 2%;
+}
+
+.navbarItems{
+
+    display: flex;
+    flex-direction: row;
+
+
+}
+#hiddenButton{
+    display: none;
+}
+#hiddenProjectButton{
+    display: none;
 }

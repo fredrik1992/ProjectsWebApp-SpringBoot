@@ -3,7 +3,7 @@ package com.example.webapp.Controllers;
 
 
 
-import com.example.webapp.Routes.MainpageRepository;
+import com.example.webapp.Repositorys.MainpageRepository;
 import com.example.webapp.DatabseClasses.mainPage;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +25,7 @@ public class AppController {
 
             ProjectMainController projectMainController = new ProjectMainController();
         ArrayList<String> navData = (ArrayList<String>) getNavData();
-        ModelAndView result = new ModelAndView("HomePage");
+        ModelAndView result = new ModelAndView("Pages/HomePage");
         ObjectMapper objectMapper = new ObjectMapper();
         try {
 

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../Css/HomePage.css">
+  <link rel="stylesheet" href="../Css/PageWrapper.css">
+  <link rel="stylesheet" href="../Css/Main.css">
+  <link rel="stylesheet" href="../Css/Navbar.css">
+  <link rel="stylesheet" href="../Css/Header.css">
+  <link rel="stylesheet" href="../Css/Footer.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+
+<div class="container pageWrapper">
+
+  <header th:replace="pageFragments/Header"></header>
+  <nav th:replace="pageFragments/Navbar"></nav>
+  <main id="main"> <!-- need to make a replace like above but make javascript get a variable from cookies and check it and get from database the value associated with it -->
+  </main>
+
+  <footer th:replace="pageFragments/Footer"></footer>
+
+
+</div>
+<script src="../Js/Header.js"></script>
+<script src="../Js/Navbar.js"></script>
+<script src="../Js/pages/AdminPage.js"></script>
+
+</body>
+</html>

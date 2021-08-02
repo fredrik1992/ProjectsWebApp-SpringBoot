@@ -1,4 +1,4 @@
-package com.example.webapp.Routes;
+package com.example.webapp.Repositorys;
 
 import com.example.webapp.DatabseClasses.mainPage;
 import org.springframework.data.repository.CrudRepository;

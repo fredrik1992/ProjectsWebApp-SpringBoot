@@ -1,0 +1,60 @@
+
+<nav class="navbar navbar-light bg-light">
+    <ul class="navbarItems">
+
+        <li class="dropdown show dropdownButton">
+                 <button class="btn btn-info btn-block btn-round dropdown-toggle projectsButton" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                       My Projects
+                     </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+      <form action="/MainPage/getMainPage" class="projectForm" id="navDropdown">
+
+
+      </form>
+
+  </div>
+</li>
+        <li>
+            <div class="container">
+                <button id="adminButton" type="button" class="btn btn-info btn-round" data-toggle="modal" data-target="#loginModal">
+                    Admin
+                </button>
+            </div>
+
+            <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header border-bottom-0">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-title text-center">
+                                <h4>AdminLogin</h4>
+                            </div>
+                            <div class="d-flex flex-column text-center">
+                                <form action="/AdminPage/getAdminPage">
+                                    <div class="form-group">
+                                        <input type="username" class="form-control" id="email1"placeholder="Your Username">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" id="password1" placeholder="Your Password...">
+                                    </div>
+                                    <button type="submit" class="btn btn-info btn-block btn-round">Login</button>
+                                </form>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+        </li>
+            <!-- when clicked needs to make an api call with the value to a get the value from database and return it in a cookie-->
+
+
+    </ul>
+
+
+</nav>

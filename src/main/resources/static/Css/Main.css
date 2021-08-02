@@ -19,7 +19,7 @@ background-color: aqua;
     flex-direction: column;
 
 }
-#headerText{
+#projectHeaderText{
     height: 15%;
     display: flex;
     justify-content: center;
@@ -51,8 +51,26 @@ background-color: aqua;
     display: block;
 }
 
-#loweBox{
+#lowerBox{
+    display: flex;
     height: 50%;
     width: 100%;
     background-color: cadetblue;
+}
+#tempBox{
+    background-color: coral;
+    width: 70%;
+}
+#tempBox2{
+    background-color: blueviolet;
+    width: 30%;
+}
+#temp2{
+    height: 50%;
+    background-color: brown;
+}
+#linkBox{
+    height: 50%;
+    background-color: chartreuse;
+
 }

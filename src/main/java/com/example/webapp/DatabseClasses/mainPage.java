@@ -1,25 +1,29 @@
 package com.example.webapp.DatabseClasses;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class mainPage {
 
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
-    private Integer id;
+    private Integer projectID;
     @Column(unique=true)
     private String header;
     private String descHeader;
     private String description;
     private String pictureUrl;
 
-    public Integer getId() {
-        return id;
+   // @OneToMany(mappedBy = "mainPage")
+   // private List<ProjectsLinks> projectsLinks;
+
+    public Integer projectID() {
+        return projectID;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setprojectID(Integer id) {
+        this.projectID = id;
     }
 
     public String getHeader() {
@@ -53,5 +57,7 @@ public class mainPage {
     public void setPictureUrl(String pictureUrl) {
         this.pictureUrl = pictureUrl;
     }
+
+
 
 }

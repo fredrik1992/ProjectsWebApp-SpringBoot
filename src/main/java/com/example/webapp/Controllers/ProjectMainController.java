@@ -1,7 +1,7 @@
 package com.example.webapp.Controllers;
 
 import com.example.webapp.DatabseClasses.mainPage;
-import com.example.webapp.Routes.MainpageRepository;
+import com.example.webapp.Repositorys.MainpageRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -27,7 +27,7 @@ public class ProjectMainController {
               .filter(page ->page.getHeader().equals(projectName))
               .collect(Collectors.toList());
 
-       ModelAndView result = new ModelAndView("HomePage");
+       ModelAndView result = new ModelAndView("Pages/HomePage");
        ObjectMapper objectMapper = new ObjectMapper();
 
        List<String> navbarChoices = getNavData();
