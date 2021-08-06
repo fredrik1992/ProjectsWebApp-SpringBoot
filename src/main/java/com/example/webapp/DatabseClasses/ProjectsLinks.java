@@ -15,7 +15,7 @@ public class ProjectsLinks {
 
     @ManyToOne
     @JoinColumn(name = "projectID")
-    private  mainPage mainPage;
+    private Projects Projects;
 
     public long getLinkID() {
         return linkID;

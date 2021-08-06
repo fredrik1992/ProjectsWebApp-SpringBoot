@@ -16,12 +16,25 @@ window.onload = function (){
     }
 }
 
+
+
+function showEditModal(projectName){
+    addProjectDataToEditModal(projectName)
+    jQuery('#editModal').modal();
+
+}
+function addNewProject(){
+    console.log("in add")
+    jQuery('#addProjectModal').modal();
+
+}
+
 function populateProjects (projectsData){
     let window = document.getElementById("showWindow")
     for (let i =0;i < projectsData.length;i++){
-       const projectName = (projectsData[i].header);
+        const projectName = (projectsData[i].header);
 
-       let liElement = document.createElement("li");
+        let liElement = document.createElement("li");
         liElement.className = "windowItem"
 
         let projectButton = document.createElement("button");
@@ -49,21 +62,11 @@ function populateProjects (projectsData){
 
 }
 
-function showEditModal(projectName){
-    addProjectDataToEdit(projectName)
-    jQuery('#editModal').modal();
-
-}
-function addNewProject(){
-    console.log("in add")
-    jQuery('#addProjectModal').modal();
-
-}
-
-function addProjectDataToEdit(projectName) {
+function addProjectDataToEditModal(projectName) {
     for (let i = 0; i < cleanProjectsData.length; i++) {
+
         if(cleanProjectsData[i].header == projectName){
-            console.log(cleanProjectsData[i].projectID);
+
             let header = document.getElementById("projectHeader");
             let descriptionHeader = document.getElementById("descriptionHeader");
             let description = document.getElementById("description");

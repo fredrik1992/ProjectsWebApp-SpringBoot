@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-public class mainPage {
+public class Projects {
 
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
