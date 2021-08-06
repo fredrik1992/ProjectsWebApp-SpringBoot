@@ -1,6 +1,6 @@
 
 
 function changeHeader(headerText){
-const headerTxt =document.getElementById("projectHeaderText")
+const headerTxt =document.getElementById("headerText")
     headerTxt.innerText = headerText;
 }

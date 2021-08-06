@@ -15,6 +15,8 @@ window.onload = function (){
         alert(Http.response);
     }
 
+    hideNavButtons("HomeButton");
+
 
 
 }

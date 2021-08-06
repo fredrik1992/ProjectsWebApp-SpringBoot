@@ -4,29 +4,58 @@
     <meta charset="UTF-8">
     <title>Title</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="../Css/HomePage.css">
+
   <link rel="stylesheet" href="../Css/PageWrapper.css">
   <link rel="stylesheet" href="../Css/Main.css">
   <link rel="stylesheet" href="../Css/Navbar.css">
   <link rel="stylesheet" href="../Css/Header.css">
   <link rel="stylesheet" href="../Css/Footer.css">
+  <link rel="stylesheet" href="../Css/AdminPage.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
+<script>
+  //used to get pagename if gotten
+  let projectsJsonString = "[[${allProjects}]]";
+
+</script>
 
 
 <div class="container pageWrapper">
 
   <header th:replace="pageFragments/Header"></header>
   <nav th:replace="pageFragments/Navbar"></nav>
-  <main id="main"> <!-- need to make a replace like above but make javascript get a variable from cookies and check it and get from database the value associated with it -->
+
+  <main id="main">
+    <div id="mainContainer"><!-- need to make a replace like above but make javascript get a variable from cookies and check it and get from database the value associated with it -->
+    <aside id="sideChoicesBox">
+      <h2>Choices</h2>
+      <form id="choiceButtons" action="/MainPage/allProjects">
+        <button class="btn btn-info btn-round choiceButton" type="submit" href="#"  id=""  aria-haspopup="true" aria-expanded="false">
+          See projects
+        </button>
+      </form>
+      <button class="btn btn-info btn-round choiceButton" onclick="addNewProject()" type="submit" href="#"  id=""  aria-haspopup="true" aria-expanded="false">
+        New Project
+      </button>
+
+    </aside>
+    <ul id="showWindow">Projects</ul>
+      </div>
   </main>
+
+
+  <div th:replace = "Modals/editProjectModal">
+
+  </div>
+  <div th:replace = "Modals/addProjectModal">
+  </div>
 
   <footer th:replace="pageFragments/Footer"></footer>
 
-
+</div>
 </div>
 <script src="../Js/Header.js"></script>
 <script src="../Js/Navbar.js"></script>

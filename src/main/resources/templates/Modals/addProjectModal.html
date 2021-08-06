@@ -1,0 +1,35 @@
+<div class="modal fade" id="addProjectModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header border-bottom-0">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-title text-center">
+          <h4>AddProject</h4>
+        </div>
+        <div class="d-flex flex-column text-center">
+          <form action="/MainPage/addProject">
+            <div class="form-group">
+              <input type="text" placeholder="Header" name= "projectHeader" class="form-control" id="projectHeader">
+            </div>
+            <div class="form-group">
+              <input type="text" placeholder="DescHeader" name="descHeader" class="form-control" id="descriptionHeader">
+            </div>
+
+            <textarea id="description" placeholder="Description" name="desc" rows="4" cols="50"></textarea>
+            <div class="form-group">
+              <input type="text" placeholder="PicLink" name="pictureLink" class="form-control" id="pictureLink">
+            </div>
+            <button type="submit" class="btn btn-info btn-block btn-round">Submit</button>
+          </form>
+
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

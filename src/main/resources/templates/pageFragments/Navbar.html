@@ -1,13 +1,13 @@
 
 <nav class="navbar navbar-light bg-light">
-    <ul class="navbarItems">
+    <ul class="navbarItemsBox">
 
         <li class="dropdown show dropdownButton">
-                 <button class="btn btn-info btn-block btn-round dropdown-toggle projectsButton" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                 <button class="btn btn-info btn-block btn-round dropdown-toggle projectsButton" href="#" role="button" id="projectsButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                        My Projects
                      </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-      <form action="/MainPage/getMainPage" class="projectForm" id="navDropdown">
+      <form action="/MainPage/getMain" class="projectForm" id="navDropdown">
 
 
       </form>
@@ -50,10 +50,17 @@
 
                     </div>
                 </div>
-        </li>
+            </div>
+            </li>
             <!-- when clicked needs to make an api call with the value to a get the value from database and return it in a cookie-->
 
+        <li>
+            <form action="/MainPage/getHomePage" class="projectForm" >
 
+            <button id="HomeButton" class="btn btn-info btn-round" type="submit">Home</button>
+            </form>
+
+        </li>
     </ul>
 
 

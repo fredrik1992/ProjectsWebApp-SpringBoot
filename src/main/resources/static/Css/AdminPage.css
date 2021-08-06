@@ -1,0 +1,31 @@
+#sideChoicesBox{
+    width: 30%;
+    height: 100%;
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.choiceButton{
+    display: none;
+    margin-bottom: 30px;
+}
+#showWindow{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 100%;
+}
+#mainContainer{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+
+#windowItem{
+    height: 10%;
+
+    width: 30%;
+}
