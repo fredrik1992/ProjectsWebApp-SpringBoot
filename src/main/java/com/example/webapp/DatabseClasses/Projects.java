@@ -1,7 +1,11 @@
 package com.example.webapp.DatabseClasses;
 
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
+
 import javax.persistence.*;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 public class Projects {
@@ -15,14 +19,26 @@ public class Projects {
     private String description;
     private String pictureUrl;
 
-   // @OneToMany(mappedBy = "mainPage")
-   // private List<ProjectsLinks> projectsLinks;
 
-    public Integer projectID() {
+
+
+    public Set<ProjectsLinks> testgetProjectsLinks() {
+        return projectsLinks;
+    }
+
+    public void setProjectsLinks(Set<ProjectsLinks> projectsLinks) {
+        this.projectsLinks = projectsLinks;
+    }
+
+    @OneToMany(mappedBy = "projects",cascade= {CascadeType.PERSIST, CascadeType.REMOVE})
+   //@Fetch(value = FetchMode.SELECT)  need to check this i want the links to load with project
+   private Set<ProjectsLinks> projectsLinks = new HashSet<>();
+
+    public Integer getprojectid() {
         return projectID;
     }
 
-    public void setprojectID(Integer id) {
+    public void setprojectid(Integer id) {
         this.projectID = id;
     }
 
@@ -57,6 +73,9 @@ public class Projects {
     public void setPictureUrl(String pictureUrl) {
         this.pictureUrl = pictureUrl;
     }
+
+
+
 
 
 

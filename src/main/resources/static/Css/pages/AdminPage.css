@@ -7,15 +7,28 @@
     align-items: center;
 
 }
-.choiceButton{
-    display: none;
-    margin-bottom: 30px;
+#choiceList{
+    position: relative;
+    right: 30%;
+    background-color: #7effb4;
+    height: 100%;
+    width: 100%;
 }
+.choiceListItem{
+    width: 100%;
+}
+
 #showWindow{
-    display: flex;
-    flex-direction: column;
+    background-color: coral;
     width: 70%;
     height: 100%;
+}
+.liBox{
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 #mainContainer{
     display: flex;
@@ -23,9 +36,21 @@
     width: 100%;
     height: 100%;
 }
+.projectsBox{
+    position: relative;
+    right: 10%;
+}
 
-#windowItem{
+.windowItemBox{
+    display: flex;
+    flex-direction: row;
     height: 10%;
-
+    width: 100%;
+    margin-bottom: 1%;
+}
+.windowItemHeader{
+width: 40%;
+}
+.windowItem{
     width: 30%;
 }

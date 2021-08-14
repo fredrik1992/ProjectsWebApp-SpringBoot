@@ -1,5 +1,8 @@
 package com.example.webapp.DatabseClasses;
 
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
+
 import javax.persistence.*;
 
 @Entity
@@ -7,21 +10,23 @@ import javax.persistence.*;
 public class ProjectsLinks {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
-    private long linkID;
+    private int linkID;
 
 
     @Column(nullable=false)
     private String link;
 
-    @ManyToOne
-    @JoinColumn(name = "projectID")
-    private Projects Projects;
+
+
+    @ManyToOne(cascade= {CascadeType.PERSIST, CascadeType.REMOVE})
+    @JoinColumn(name = "projectID", nullable = false)
+    private Projects projects;
 
     public long getLinkID() {
         return linkID;
     }
 
-    public void setlinkID(long id) {
+    public void setlinkID(int id) {
         this.linkID = id;
     }
 
@@ -31,5 +36,13 @@ public class ProjectsLinks {
 
     public void setLink(String link) {
         this.link = link;
+    }
+
+    public com.example.webapp.DatabseClasses.Projects getProjects() {
+        return projects;
+    }
+
+    public void setProjects(com.example.webapp.DatabseClasses.Projects projects) {
+        this.projects = projects;
     }
 }

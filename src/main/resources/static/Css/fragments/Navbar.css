@@ -1,6 +1,6 @@
 nav{
 
-background-color: brown;
+background-color: #6C5A49;
 height: 5%;
 }
 .projectsButton{
@@ -24,7 +24,6 @@ margin-bottom: 2%;
 }
 
 .navbarItemsBox{
-    background-color: #1E90FF;
     position: relative;
     right: 10%;
     top: 15%;

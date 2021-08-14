@@ -2,12 +2,18 @@ window.onload = function (){
     hideNavButtons("HomeButton");
 
     if (pageDataJsonString){
+
         let pageData =cleanJsonString(pageDataJsonString);
         populateMainWindow(pageData)
     }
     if (navbarDataJsonString){
         populateNavbar();
 
+    if (linksDataJsonString){
+        let linksData = cleanJsonString(linksDataJsonString)
+        populateLinksWindow(linksData);
+
+    }
     }else{
 
         const Http = new XMLHttpRequest();

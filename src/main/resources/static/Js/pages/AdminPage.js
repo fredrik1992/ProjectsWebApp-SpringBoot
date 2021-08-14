@@ -28,34 +28,55 @@ function addNewProject(){
     jQuery('#addProjectModal').modal();
 
 }
+function addNewUser(){
+    console.log("add user");
+    jQuery('#addUserModal').modal();
+}
 
 function populateProjects (projectsData){
-    let window = document.getElementById("showWindow")
+
+    let projectsUl = document.getElementById("projectsUl")
+
     for (let i =0;i < projectsData.length;i++){
         const projectName = (projectsData[i].header);
 
         let liElement = document.createElement("li");
-        liElement.className = "windowItem"
+        liElement.className = "windowItemBox"
 
         let projectButton = document.createElement("button");
-        projectButton.className = "btn btn-primary";
+        projectButton.className = "btn btn-primary windowItemHeader";
         projectButton.innerText = projectName;
 
         let editButton = document.createElement("button");
-        editButton.className = "btn btn-primary";
+        editButton.className = "btn btn-primary windowItem";
         editButton.innerText = "edit";
         editButton.value = projectName;
 
         const funcString = "showEditModal(\"" +projectName+ "\")";
-
         editButton.setAttribute("onclick",funcString);
 
+        let form = document.createElement("form");
+        form.action = "/AdminPage/deleteProject";
+        form.className = "btn btn-primary windowItem";
+
+        let input = document.createElement("input");
+        input.type = "hidden";
+        input.name = "projectHeader"
+        input.value = projectName;
+
+        let deleteButton = document.createElement("button");
+        deleteButton.className = "btn btn-primary";
+        deleteButton.type = "submit";
+        deleteButton.innerText = "Del";
 
 
 
         liElement.appendChild(projectButton);
         liElement.appendChild(editButton);
-        window.appendChild(liElement);
+        form.appendChild(input);
+        form.appendChild(deleteButton);
+        liElement.appendChild(form);
+        projectsUl.appendChild(liElement);
 
 
     }

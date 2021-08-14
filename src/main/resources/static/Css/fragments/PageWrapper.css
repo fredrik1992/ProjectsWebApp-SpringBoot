@@ -1,4 +1,5 @@
 .pageWrapper{
+    background-color:#271F30 ;
     display: flex;
     flex-direction: column;
     width: 100%;

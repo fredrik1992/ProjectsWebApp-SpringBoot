@@ -15,3 +15,19 @@ function populateMainWindow(pageData){
 
 }
 
+function populateLinksWindow (linksData){
+
+    for (let i =0;i<linksData.length;i++){
+        let link = linksData[i]["link"];
+        let linkWindow = document.getElementById("linkBox");
+
+        let linkElement = document.createElement("a");
+        linkElement.className = "link-primary";
+        linkElement.href = link;
+        let shortLink = link.substring(0,18);
+        linkElement.innerText = shortLink;
+
+        linkWindow.appendChild(linkElement);
+
+    }
+}

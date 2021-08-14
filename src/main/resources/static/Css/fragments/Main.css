@@ -1,5 +1,5 @@
 main{
-background-color: aqua;
+background-color: #C8AD55;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -7,31 +7,30 @@ background-color: aqua;
 #topBox{
     width: 100%;
     height: 60%;
-    background-color: brown;flex-direction: row;
+    flex-direction: row;
     display: flex;
     flex-direction: row;
 }
 #infoBox{
     height: 100%;
     width: 50%;
-    background-color: #7effb4;
     display: flex;
     flex-direction: column;
 
 }
 #projectHeaderText{
+    text-decoration: underline;
     height: 15%;
     display: flex;
     justify-content: center;
-    background-color: chartreuse;
 }
 #descriptionText{
+    margin-left: 4px;
+    margin-right: 4px;
     flex-grow: 1;
-    background-color: gray;
 
 }
 #descriptionTextHeader{
-    background-color: gray;
     display: flex;
     justify-content: center;
 
@@ -58,7 +57,6 @@ background-color: aqua;
     background-color: cadetblue;
 }
 #tempBox{
-    background-color: coral;
     width: 70%;
 }
 #tempBox2{
@@ -70,6 +68,8 @@ background-color: aqua;
     background-color: brown;
 }
 #linkBox{
+    display: flex;
+    flex-direction: column;
     height: 50%;
     background-color: chartreuse;
 
